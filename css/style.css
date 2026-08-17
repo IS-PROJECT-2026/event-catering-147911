@@ -338,3 +338,144 @@ footer p {
         text-align: center;
     }
 }
+.menu {
+    padding: 90px 7%;
+    background: #fffaf4;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.menu-intro {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: #c77b30;
+    color: white;
+    border-color: #c77b30;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    text-align: left;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-image {
+    height: 150px;
+    background: #f1dfca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-category {
+    color: #c77b30;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-content h3 {
+    margin: 7px 0;
+    font-size: 20px;
+}
+
+.menu-content p {
+    color: #666;
+    font-size: 14px;
+    min-height: 65px;
+}
+
+.menu-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.menu-bottom strong {
+    color: #c77b30;
+    font-size: 18px;
+}
+
+.cart-btn {
+    border: none;
+    background: #1d1d1d;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cart-btn:hover {
+    background: #c77b30;
+}
+
+.cart-summary {
+    margin: 40px auto 0;
+    background: #1d1d1d;
+    color: white;
+    padding: 18px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+@media (max-width: 1100px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu h2 {
+        font-size: 32px;
+    }
+}
