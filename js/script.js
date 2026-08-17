@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const category = button.dataset.category;
 
             menuItems.forEach(item => {
-                item.style.display =
-                    category === "all" ||
-                    item.dataset.category === category
-                        ? "block"
-                        : "none";
+                if (category === "all" || item.dataset.category === category) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
             });
         });
     });
@@ -40,4 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1000);
         });
     });
+
+    console.log("EventEase menu catalogue loaded.");
 });
