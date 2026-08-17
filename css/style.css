@@ -479,3 +479,201 @@ footer p {
         font-size: 32px;
     }
 }
+/* =========================================
+   CATERING PACKAGES
+   ========================================= */
+
+.packages {
+    padding: 90px 7%;
+    background: #f4eadf;
+    text-align: center;
+}
+
+.packages-intro {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    color: #666;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.package {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 18px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.package:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.package-icon {
+    display: block;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.package h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.package-description {
+    color: #666;
+    min-height: 55px;
+    line-height: 1.6;
+}
+
+.package .price {
+    color: #c77b30;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.package .price small {
+    font-size: 13px;
+    color: #777;
+    font-weight: normal;
+}
+
+.package ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    line-height: 2.2;
+    color: #555;
+}
+
+.package a {
+    display: block;
+    text-align: center;
+    background: #1d1d1d;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.package a:hover {
+    background: #c77b30;
+}
+
+.package.featured {
+    border: 3px solid #c77b30;
+    transform: translateY(-12px);
+}
+
+.package.featured:hover {
+    transform: translateY(-18px);
+}
+
+.popular {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #c77b30;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablets */
+@media (max-width: 1000px) {
+
+    .package-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .package.featured {
+        transform: none;
+    }
+
+    .package.featured:hover {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .packages {
+        padding: 65px 5%;
+    }
+
+    .packages h2 {
+        font-size: 32px;
+    }
+
+    .packages-intro {
+        font-size: 15px;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .package {
+        padding: 32px 24px;
+    }
+
+    .package.featured {
+        transform: none;
+    }
+
+    .package.featured:hover {
+        transform: translateY(-8px);
+    }
+
+    .package-description {
+        min-height: auto;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 450px) {
+
+    .packages {
+        padding: 50px 4%;
+    }
+
+    .package {
+        padding: 28px 20px;
+    }
+
+    .package h3 {
+        font-size: 23px;
+    }
+
+    .package .price {
+        font-size: 24px;
+    }
+
+    .popular {
+        right: 12px;
+        font-size: 10px;
+    }
+}
