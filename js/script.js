@@ -1,0 +1,1 @@
+console.log("Event Catering Booking System loaded.");
